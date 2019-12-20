@@ -1,2 +1,2 @@
 # italo.iung
-## Portfólio desenvolvido por mim para mim
+## Portfolio devoleped by me for me
