@@ -1,0 +1,50 @@
+{
+  "name": "italo",
+  "version": "1.0.0",
+  "description": "My own developer portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp watcher"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/italoiung/italo.iung.git"
+  },
+  "keywords": [
+    "Dev",
+    "Portfolio",
+    "Front-end",
+    "Gulp",
+    "Sass",
+    "Node"
+  ],
+  "author": "Ítalo Iung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/italoiung/italo.iung/issues"
+  },
+  "homepage": "https://github.com/italoiung/italo.iung#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.8",
+    "gulp-concat": "^2.6.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-responsive": "^3.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
+    "imagemin-webp": "^5.1.0"
+  },
+  "dependencies": {}
+}

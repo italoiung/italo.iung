@@ -1,0 +1,29 @@
+@import "../components/logo";
+@import "../components/nav";
+
+header {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100vh;
+    padding: 2rem 0;
+
+    .head {
+        text-align: center;
+        .head__title {
+            @include fluid-type(32px, 52px);
+            margin-bottom: 0.5rem;
+        }
+
+        .head__description {
+            font-family: $font-body;
+            font-weight: 400;
+
+            width: 75vw;
+            margin: auto;
+        }
+    }
+}

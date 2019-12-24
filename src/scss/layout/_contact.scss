@@ -1,0 +1,198 @@
+main {
+    .secondary-section--contact {
+        .secondary-section__item--head {
+            background-color: $bg-color;
+        }
+
+        .secondary-section__item--content {
+            background-color: $dark-pink;
+
+            p > br {
+                display: none;
+
+                @include sm {
+                    display: initial;
+                }
+            } 
+
+            form {
+                .grid-form-group {
+                    @include md {
+                        display: grid;
+                        grid-gap: 15px;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+                .form-group {
+                    label {
+                        display: block;
+                        margin-bottom: .25rem;
+
+                        @include fontSize(22);
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+
+                    input,
+                    textarea {
+                        font-family: $font-items;
+                        font-weight: 300;
+
+                        width: 100%;
+                        padding: 0.5em;
+                        border: 0;
+                        border-bottom: 4px solid $highlight;
+                        outline: none;
+                        margin-bottom: 0.5rem;
+
+                        @include fontSize(16);
+
+                        background-color: rgba($color: $text-primary, $alpha: 0.5);
+
+                        transition: .25s all;
+
+                        @include on-event {
+                            background-color: rgba($color: $text-primary, $alpha: 0.75);
+                            border-color:$highlight-pink;
+                        }
+                    }
+
+                    textarea {
+                        height: 200px;
+                    }
+                }
+
+                button {
+                    position: relative;
+                    overflow: hidden;
+
+                    font-family: $font-items;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                    width: 100%;
+                    padding: 0.5rem;
+                    border: 0;
+
+                    background-color: $highlight;
+                    color: $text-primary;
+
+                    &::before {
+                        content: "Vai, envia! ; )";
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 100%;
+                        height: 100%;
+
+                        background-color: $highlight-pink;
+
+                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275)
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: calc(50% - 15px);
+
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        border: 6px solid $text-primary;
+                        border-color: $text-primary transparent $text-primary transparent;
+                        margin-top: 3px;
+
+                        animation: loading 1.2s linear infinite;
+                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275)
+                    }
+
+                    &:hover {
+                        &::before {
+                            top: 0;
+                        }
+                    }
+
+                    &:focus,
+                    &:active {
+                        color: transparent;
+
+                        &::before {
+                            top: 100%;
+                        }
+
+                        &::after {
+                            top: 0;
+                        }
+                    }
+                }
+
+                &.sending {
+                    button {
+                        &::after {
+                            top: 0;
+                        }
+                    }
+                }
+                
+                &.sent {
+                    button {
+                        &::after {
+                            content: "Enviado!";
+                            left: 0;
+                            margin-top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            height: 100%;
+                            width: 100%;
+                            border: 0;
+                            border-radius: 0;
+
+                            color: $text-primary;
+
+                            animation: unset;
+                        }
+                    }
+                }
+
+                &.error {
+                    button {
+                        &::after {
+                            content: "Falha no envio. Por favor, tente novamente";
+                            left: 0;
+                            margin-top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            height: 100%;
+                            width: 100%;
+                            border: 0;
+                            border-radius: 0;
+
+                            background-color: $error;
+                            color: $text-primary;
+
+                            animation: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

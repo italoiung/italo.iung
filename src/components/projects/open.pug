@@ -1,0 +1,24 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/open.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/open.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/open-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/open-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/open-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/open-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/open-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/open-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/open.jpg" alt="Open Solution" title="Open Solution")
+    figure.project__logo(style={'background-color': '#15191a'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/open-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/open-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/open-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/open-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/open-logo.png" alt="Open Solution - Logo")
+    p Wordpress, HTML, CSS e Javascript
+    h3 Open Solution
+    .meta
+        a(href="http://www.opensolution.com.br/" rel="noopener external" target="_blank").
+            !{locals.link}

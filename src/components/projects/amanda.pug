@@ -1,0 +1,26 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/amanda.jpg" alt="Amanda Iung" title="Amanda Iung")
+    figure.project__logo(style={'background-color': '#384346'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/amanda-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/amanda-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/amanda-logo.png" alt="Amanda Iung - Logo")
+    p Headless Wordpress e Gatsby.js
+    h3 Amanda Iung
+    .meta
+        a(href="https://amanda.iung.me" rel="noopener external" target="_blank").
+            !{locals.link}
+        a(href="https://github.com/italoiung/amanda.iung" rel="noopener external" target="_blank").
+            !{locals.github}

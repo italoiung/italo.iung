@@ -1,0 +1,26 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/italo.jpg" alt="Ítalo Iung" title="Ítalo Iung")
+    figure.project__logo(style={'background-color': '#06231a'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/italo-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/italo-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/italo-logo.png" alt="Ítalo Iung - Logo")
+    p Pug.js, Sass, Javascript e Gulp.js
+    h3 Ítalo Iung
+    .meta
+        a(href="https://italo.iung.me" target="_blank").
+            !{locals.link}
+        a(href="https://github.com/italoiung/italo.iung" rel="noopener external" target="_blank").
+            !{locals.github}

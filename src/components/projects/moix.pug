@@ -1,0 +1,24 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/moix.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/moix.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/moix-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/moix-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/moix-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/moix-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/moix-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/moix-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/moix.jpg" alt="Moinhos Investimentos" title="Moinhos Investimentos")
+    figure.project__logo(style={'background-color': '#ffb400'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/moix-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/moix-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/moix-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/moix-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/moix-logo.png" alt="Moinhos Investimentos - Logo")
+    p Wordpress, HTML, CSS e Javascript
+    h3 Moinhos Investimentos
+    .meta
+        a(href="http://moix.com.br" rel="noopener external" target="_blank").
+            !{locals.link}

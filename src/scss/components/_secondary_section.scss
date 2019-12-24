@@ -1,0 +1,94 @@
+@import "../components/nav";
+
+main {
+    .secondary-section {
+        position: relative;
+
+        @include lg {
+            min-height: 100vh;
+        }
+
+        .secondary-section__item {
+            padding: 2rem;
+
+            width: 100%;
+
+            @include lg {
+                width: 50%;
+            }
+        }
+
+        .secondary-section__item--head {
+            display: flex;
+            flex-direction: column;
+            
+            text-align: center;
+            
+            overflow: hidden;
+            
+            h2 {
+                @include fluid-type(32px, 52px);
+                
+                margin: auto;
+                margin-top: 0;
+
+                @include lg {
+                    margin-top: auto;
+                }
+            }
+
+            z-index: 10;
+            
+            height: 140px;
+
+            @include sm {
+                height: 165px;
+            }
+            
+            @include lg {
+                position: absolute;
+                top: 0;
+
+                height: 100vh;
+            }
+
+            @include screenHeight(500) {
+                position: absolute !important;
+                top: 0 !important;
+                bottom: initial !important;
+            }
+        }
+
+        .secondary-section__item--content {
+            min-height: 100vh;
+            margin-left: auto;
+            padding-top: calc(140px + 2rem);
+            
+            @include sm {
+                padding-top: calc(165px + 2rem);
+            }
+
+            @include lg {
+                margin-top: 0;
+                padding-top: 2rem;
+            }
+
+            h3 {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                @include fontSize(40);
+
+                .aside {
+                    margin-left: auto;
+
+                    text-transform: uppercase;
+                    @include fontSize(32);
+                    font-family: $font-items;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}

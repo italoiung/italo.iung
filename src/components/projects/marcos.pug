@@ -1,0 +1,24 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/marcos.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/marcos.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/marcos-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/marcos-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/marcos-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/marcos-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/marcos-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/marcos-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/marcos.jpg" alt="Marcos Eberhardt" title="Marcos Eberhardt")
+    figure.project__logo(style={'background-color': '#2a2929'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/marcos-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/marcos-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/marcos-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/marcos-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/marcos-logo.png" alt="Marcos Eberhardt - Logo")
+    p Wordpress, HTML, CSS e Javascript
+    h3 Marcos Eberhardt
+    .meta
+        a(href="https://marcoseberhardt.com.br/" rel="noopener external" target="_blank").
+            !{locals.link}

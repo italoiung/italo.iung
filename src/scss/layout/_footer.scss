@@ -1,0 +1,106 @@
+footer {
+    .thanks {
+        display: flex;
+
+        height: 500px;
+
+        .girl {
+            position: absolute;
+            right: 100%;
+            top: -100%;
+            z-index: -1;
+
+            filter: drop-shadow(2.5px 2.5px $highlight-pink);
+            transform: translate(50%, -50%) rotate(7.5deg);
+            
+            @include md {
+                transform: translate(45%, -45%) rotate(7.5deg);
+            }
+        }
+
+        .thanks__item {
+            position: relative;
+            z-index: 1;
+            @include fluid-type(48px, 68px);
+            text-shadow: -5px 5px $highlight;
+
+            margin: auto;
+            
+            margin-bottom: 125px;
+            
+            // @include md {
+            //     margin-bottom: 110px;
+            // }
+
+            @include xl {
+                margin-bottom: 110px;
+            }
+        }
+    }
+
+    .bottom-footer {
+        background-color: $bg-color;
+
+        .bottom-footer__inner {
+            max-width: $max-width;
+            width: 100%;
+            margin: auto;
+            padding: 0.75rem 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .bottom-footer__inner__item--social {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 15px;
+
+                a {
+                    display: block;
+                    width: 30px;
+
+                    transition: 0.5s all;
+
+                    .github {
+                        border-radius: 50%;
+                        background-color: transparent;
+                    }
+
+                    @include on-event {
+                        &.github {
+                            svg {
+                                fill: #000000;
+                            }
+                        }
+
+                        &.linkedin {
+                            svg {
+                                fill: #0077b5;
+                            }
+                        }
+
+                        &.whatsapp {
+                            svg {
+                                fill: #25d366;
+                            }
+                        }
+                    }
+
+                    svg {
+                        fill: $text-primary;
+
+                        transition: 0.5s all;
+                    }
+                }
+            }
+
+            .bottom-footer__inner__item--copyright {
+                @include fontSize(24);
+                text-align: center;
+
+                margin: 0;
+            }
+        }
+    }
+}

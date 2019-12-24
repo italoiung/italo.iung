@@ -1,0 +1,24 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/abreast.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/abreast.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/abreast-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/abreast-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/abreast-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/abreast-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/abreast-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/abreast-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/abreast.jpg" alt="Abreast" title="Abreast")
+    figure.project__logo(style={'background-color': '#d9d9d9'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/abreast-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/abreast-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/abreast-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/abreast-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/abreast-logo.png" alt="Abreast - Logo")
+    p Wordpress e Bootstrap
+    h3 Abreast
+    .meta
+        a(href="https://abreast.net.br" rel="noopener external" target="_blank").
+            !{locals.link}

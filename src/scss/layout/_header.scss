@@ -1,0 +1,34 @@
+@import '../components/logo';
+@import '../components/nav';
+
+header {
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+
+    &.scroll {
+        background-color: rgba($color: $dark-blue, $alpha: 0.75);
+    }
+
+    .inner-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-family: $font-items;
+        @include fontSize(24);
+
+        max-width: $max-width;
+        width: 100%;
+        margin: auto;
+        padding: 1rem 0.25rem;
+
+        nav {
+            a {
+                padding: 0.25rem;
+                font-weight: 300;
+            }
+        }
+    }
+}

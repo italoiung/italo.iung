@@ -1,0 +1,25 @@
+.logo {
+    position: relative;
+
+    .logo__item {
+        display: inline-block;
+
+        font-weight: 900;
+        font-family: $font-body;
+        @include fontSize(150);
+        line-height: 1;
+        text-shadow: -4px 4px $highlight;
+
+        transition: .5s text-shadow steps(4);
+
+        &:last-child {
+            transform: rotate(180deg);
+        }
+    }
+
+    @include on-event {
+        .logo__item {
+            @include shadowEffect();
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import '../components/principios';
+
+main {
+    .secondary-section--about {
+        .secondary-section__item--head {
+            background-color: $bg-color;
+        }
+
+        .secondary-section__item--content {
+            background-color: $dark-pink;
+            
+            @include xl {
+                padding: 2rem 2em 2rem 5rem;
+            }
+        }
+
+        .logo-aside {
+            position: absolute;
+            z-index: 20;
+            display: none;
+
+            cursor: default;
+            
+            @include sm {
+                display: block;
+                right: 20px;
+            }
+
+            @include lg {
+                right: initial;
+                left: 25%;
+    
+                transform: translateX(-50%);
+            }
+
+            @include xl {
+                right: initial;
+                left: 50%;
+    
+                transform: translateX(-50%);
+            }
+
+            @include screenHeight(500) {
+                position: absolute !important;
+                top: 20px !important;
+                bottom: initial !important;
+            }
+
+            .logo {
+                position: relative;
+
+                .logo__item {
+                    font-size: 125px;
+
+                    @include lg {
+                        font-size: 200px;
+                        letter-spacing: -10px;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}

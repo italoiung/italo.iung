@@ -1,0 +1,10 @@
+nav {
+    @include fontSize(24);
+    font-family: $font-items;
+    font-weight: 100;
+
+    a {
+        padding: 0.25rem;
+        font-weight: 300;
+    }
+}

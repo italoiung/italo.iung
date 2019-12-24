@@ -1,0 +1,24 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/serro.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/serro.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/serro-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/serro-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/serro-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/serro-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/serro-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/serro-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/serro.jpg" alt="Serro do Queijo" title="Serro do Queijo")
+    figure.project__logo(style={'background-color': '#002255'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/serro-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/serro-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/serro-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/serro-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/serro-logo.png" alt="Serro do Queijo - Logo")
+    p Wordpress e WooCommerce
+    h3 Serro do Queijo
+    .meta
+        a(href="https://serrodoqueijo.com" rel="noopener external" target="_blank").
+            !{locals.link}
