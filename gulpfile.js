@@ -45,11 +45,11 @@ function clean() {
 const paths = {
     'scss': {
         'origin': './src/scss/**/*.scss',
-        'dest': './dist/assets/css'
+        'dest': './src/compiled/css'
     },
     'js': {
         'origin': './src/js/**/*.js',
-        'dest': './dist/assets/js'
+        'dest': './src/compiled/js'
     },
     'img': {
         'origin': './src/img/**/*.*',
@@ -251,7 +251,7 @@ function watchFiles() {
     watch(paths.font.origin, font)
 }
 
-const build = series(clean, parallel(scss, js, series(img_resize, img, components, home), vid, meta, font))
+const build = series(clean, parallel(series(parallel(img_resize, img, scss, js), components, home), vid, meta, font))
 const watcher = parallel(watchFiles, browserSync)
 
 exports.img = img

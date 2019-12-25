@@ -5,13 +5,6 @@
         elements_selector: ".lazy"
     })
 
-    // window.addEventListener('load', event => {
-    //     const video = document.querySelector('#videoBackground')
-    //     // Force autoplay for browser compatibility
-    //     console.log(video)
-    //     video.play()
-    // })
-
     // Smooth scroll for nav links
     const navLinks = document.querySelectorAll('nav > a')
     navLinks.forEach(link => {

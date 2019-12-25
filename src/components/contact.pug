@@ -17,14 +17,14 @@ section.secondary-section.secondary-section--contact#contato
             .grid-form-group
                 .form-group
                     label(for="nome") Nome
-                    input#nome(type="text" name="nome" placeholder="Seu nome aqui...")
+                    input#nome(type="text" name="nome" placeholder="Seu nome aqui..." required)
                 .form-group
                     label(for="email") E-mail
-                    input#email(type="email" name="email" placeholder="Seu e-mail aqui...")
+                    input#email(type="email" name="email" placeholder="Seu e-mail aqui..." required)
             .form-group
                 label(for="assunto") Assunto
-                input#assunto(type="text" name="assunto" placeholder="O assunto da mensagem aqui...")
+                input#assunto(type="text" name="assunto" placeholder="O assunto da mensagem aqui..." required)
             .form-group
                 label(for="mensagem") Mensagem
-                textarea#mensagem(type="text" name="mensagem" placeholder="Sua mensagem aqui...")
+                textarea#mensagem(type="text" name="mensagem" placeholder="Sua mensagem aqui..." required)
             button(type="submit") Enviar
