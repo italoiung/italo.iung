@@ -80,51 +80,56 @@ const paths = {
 // Image resize
 function img_resize() {
     return src(paths.img_projects.origin)
-        .pipe(responsive({
-            '*.jpg': [
+        .pipe(responsive(
+            {
+                '*.jpg': [
+                    {
+                        width: 576,
+                        rename: function (path) {
+                            return {
+                                dirname: path.dirname,
+                                basename: path.basename + '-sm',
+                                extname: '.jpg'
+                            }
+                        }
+                    },
+                    {
+                        width: 768,
+                        rename: function (path) {
+                            return {
+                                dirname: path.dirname,
+                                basename: path.basename + '-md',
+                                extname: '.jpg'
+                            }
+                        }
+                    },
+                    {
+                        width: 1200,
+                        rename: function (path) {
+                            return {
+                                dirname: path.dirname,
+                                basename: path.basename + '-lg',
+                                extname: '.jpg'
+                            }
+                        }
+                    }
+                ],
+                '*.png':
                 {
-                    width: 576,
+                    width: 300,
                     rename: function (path) {
                         return {
                             dirname: path.dirname,
                             basename: path.basename + '-sm',
-                            extname: '.jpg'
-                        }
-                    }
-                },
-                {
-                    width: 768,
-                    rename: function (path) {
-                        return {
-                            dirname: path.dirname,
-                            basename: path.basename + '-md',
-                            extname: '.jpg'
-                        }
-                    }
-                },
-                {
-                    width: 1200,
-                    rename: function (path) {
-                        return {
-                            dirname: path.dirname,
-                            basename: path.basename + '-lg',
-                            extname: '.jpg'
+                            extname: '.png'
                         }
                     }
                 }
-            ],
-            '*.png':
+            },
             {
-                width: 150,
-                rename: function (path) {
-                    return {
-                        dirname: path.dirname,
-                        basename: path.basename + '-sm',
-                        extname: '.png'
-                    }
-                }
+                errorOnEnlargement: false
             }
-        }))
+        ))
         .pipe(dest(paths.img_projects.dest))
 }
 
@@ -251,7 +256,7 @@ function watchFiles() {
     watch(paths.font.origin, font)
 }
 
-const build = series(clean, parallel(series(parallel(img_resize, img, scss, js), components, home), vid, meta, font))
+const build = series(clean, parallel(series(parallel(series(img_resize, img), scss, js), components, home), vid, meta, font))
 const watcher = parallel(watchFiles, browserSync)
 
 exports.img = img
