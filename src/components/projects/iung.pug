@@ -1,0 +1,26 @@
+article.project
+    figure.project__fundo
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/iung.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/iung.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/iung-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/iung-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/iung-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/iung-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/iung-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/iung-sm.jpg" type="image/jpeg")
+            img.lazy(data-src="./assets/img/projects/iung.jpg" alt="Iung" title="Ítalo Iung")
+    figure.project__logo(style={'background': '#262626', 'background': 'linear-gradient(90deg, #06231a 50%, #384346 50%)'})
+        picture
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/iung-logo.webp" type="image/webp")
+            source(media="(min-width: 576px)" data-srcset="./assets/img/projects/iung-logo.png" type="image/png")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/iung-logo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/iung-logo-sm.png" type="image/png")
+            img.lazy(data-src="./assets/img/projects/iung-logo.png" alt="Iung - Logo")
+    p Pug.js, Sass, Javascript e Gulp.js
+    h3 Iung
+    .meta
+        a.link(href="https://iung.me" target="_blank").
+            !{locals.link}
+        a.git(href="https://github.com/italoiung/iung.me" rel="noopener external" target="_blank").
+            !{locals.github}
