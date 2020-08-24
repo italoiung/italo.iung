@@ -158,16 +158,6 @@ function img() {
         .pipe(dest(paths.img.dest))
 }
 
-// Concat single projects pug files
-// function projects() {
-//     return src(paths.projects.origin)
-//         .pipe(pug())
-//         .pipe(concat('projects.html'))
-//         .pipe(prependText('<section class="secondary-section secondary-section--projects">'))
-//         .pipe(appendText('</section>'))
-//         .pipe(dest(paths.projects.dest))
-// }
-
 // Conpile components to html
 function components() {
     return src(paths.components.origin)
