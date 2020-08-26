@@ -1,0 +1,46 @@
+.case
+    .case__wrapper
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-sm.jpg" type="image/jpeg")
+            img.lazy.case__background(data-src="./assets/img/projects/amanda.jpg" alt="Amanda Iung" title="Amanda Iung")
+        .case__meta
+            .case__meta__item.case__meta__item--eye(data-target="case-modal-amanda").
+                !{locals.eye}
+    .case__modal#case-modal-amanda
+        .case__modal__close(data-close)
+        .case__modal__content
+            .case__modal__content__text
+                .case__modal__content__text__logos.
+                    !{locals.gatsby} 
+                    + 
+                    !{locals.wordpress}
+                p O projeto criado une o melhor de dois mundos: o desejo por rapidez e agilidade graças ao uso do gerador de site estático Gatsby e a intuitividade do já conhecido gerenciador de conteúdo, WordPress.
+                p Com o WordPress, temos controle do menu ao rodapé, incluindo itens de SEO, tipos de post customizados e plugins adicionais.
+            .case__modal__content__pics
+                picture
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda-case-desktop.webp" type="image/webp")
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda-case-desktop.jpg" type="image/jpeg")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-lg.webp" type="image/webp")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-lg.jpg" type="image/jpeg")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-md.webp" type="image/webp")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-md.jpg" type="image/jpeg")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-sm.webp" type="image/webp")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-case-desktop-sm.jpg" type="image/jpeg")
+                    img.lazy(data-src="./assets/img/projects/amanda-case-desktop.jpg" alt="Velocidade" title="Velocidade")
+                picture
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda-admin.webp" type="image/webp")
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/amanda-admin.jpg" type="image/jpeg")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-admin-lg.webp" type="image/webp")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/amanda-admin-lg.jpg" type="image/jpeg")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-admin-md.webp" type="image/webp")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/amanda-admin-md.jpg" type="image/jpeg")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-admin-sm.webp" type="image/webp")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/amanda-admin-sm.jpg" type="image/jpeg")
+                    img.lazy(data-src="./assets/img/projects/amanda-admin.jpg" alt="Painel administrativo" title="Painel administrativo")

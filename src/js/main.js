@@ -11,7 +11,6 @@
         link.addEventListener('click', event => {
             event.preventDefault()
             let element = document.getElementById(link.href.split('#')[1])
-            console.log(element)
             window.scrollTo({
                 top: element.offsetTop - element.scrollTop + element.clientTop,
                 behavior: 'smooth'
@@ -66,6 +65,7 @@
             principios.classList.remove('scrolled')
         }
     })
+
     // Handling form submission
     const form = document.getElementById('contact-form')
     form.addEventListener('submit', event => {
@@ -96,5 +96,24 @@
                 }
             })
             .catch(e => console.log(e))
+    })
+
+    //Handling modal opening
+    const linkTriggers = document.querySelectorAll('[data-target]')
+    linkTriggers.forEach(item => {
+        const modal = document.getElementById(item.getAttribute('data-target'))
+        item.addEventListener('click', () => {
+            document.querySelector('html').style.overflowY = 'hidden'
+            modal.classList.add('active')
+        })
+    })
+    
+    //Handling modal closing
+    const closeTriggers = document.querySelectorAll('[data-close]')
+    closeTriggers.forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelector('html').style.overflowY = 'auto'
+            document.querySelector('.case__modal.active').classList.remove('active')
+        })
     })
 }

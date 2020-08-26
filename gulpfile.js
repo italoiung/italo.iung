@@ -73,7 +73,8 @@ const paths = {
     },
     'components': {
         'origin': './src/components/*.pug',
-        'dest': './src/compiled'
+        'watch': './src/components/**/*.pug',
+        'dest': './dist'
     },
 }
 
@@ -158,7 +159,8 @@ function img() {
         .pipe(dest(paths.img.dest))
 }
 
-// Conpile components to html
+// Conpile pug pages to html
+var cbString = new Date().getTime();
 function components() {
     return src(paths.components.origin)
         .pipe(pug({
@@ -167,27 +169,16 @@ function components() {
                 linkedin: fs.readFileSync('./dist/assets/img/icons/linkedin.svg', 'utf8'),
                 whatsapp: fs.readFileSync('./dist/assets/img/icons/whatsapp.svg', 'utf8'),
                 link: fs.readFileSync('./dist/assets/img/icons/link.svg', 'utf8'),
+                eye: fs.readFileSync('./dist/assets/img/icons/eye.svg', 'utf8'),
+                gatsby: fs.readFileSync('./dist/assets/img/icons/gatsby.svg', 'utf8'),
+                wordpress: fs.readFileSync('./dist/assets/img/icons/wordpress.svg', 'utf8'),
                 girl: fs.readFileSync('./dist/assets/img/contact_colored.svg', 'utf8'),
                 year: new Date().getFullYear()
             }
         }))
-        .pipe(dest(paths.components.dest))
-}
-
-// Concat predefined components
-var cbString = new Date().getTime();
-function home() {
-    return src([
-        paths.components.dest + '/header.html',
-        paths.components.dest + '/about.html',
-        paths.components.dest + '/projects.html',
-        paths.components.dest + '/contact.html',
-        paths.components.dest + '/footer.html',
-    ])
         .pipe(replace(/cb=\d+/, 'cb=' + cbString))
-        .pipe(concat('index.html'))
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(dest('./dist'))
+        .pipe(dest(paths.components.dest))
         .pipe(browsersync.stream())
 }
 
@@ -236,22 +227,23 @@ function font() {
 
 // Watch for changes
 function watchFiles() {
-    watch(paths.scss.origin, series(scss, browserSyncReload))
-    watch(paths.js.origin, series(js, browserSyncReload))
-    watch(paths.components.origin, series(components, home, browserSyncReload))
-    watch(paths.img_projects.origin, img_resize)
+    watch(paths.scss.origin, series(scss, components, browserSyncReload))
+    watch(paths.js.origin, series(js, components, browserSyncReload))
+    watch(paths.components.watch, series(components, browserSyncReload))
+    watch(paths.img_projects.origin, series(img_resize, img))
     watch(paths.img.origin, img)
     watch(paths.vid.origin, vid)
     watch(paths.meta.origin, meta)
     watch(paths.font.origin, font)
 }
 
-const build = series(clean, parallel(series(parallel(series(img_resize, img), scss, js), components, home), vid, meta, font))
+const build = series(clean, parallel(series(parallel(series(img_resize, img), scss, js), components), vid, meta, font))
 const watcher = parallel(watchFiles, browserSync)
 
 exports.img = img
 exports.scss = scss
 exports.js = js
+exports.components = components
 exports.clean = clean
 exports.build = build
 exports.watcher = watcher

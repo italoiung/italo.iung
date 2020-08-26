@@ -1,0 +1,43 @@
+.case
+    .case__wrapper
+        picture
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo.webp" type="image/webp")
+            source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo.jpg" type="image/jpeg")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-lg.webp" type="image/webp")
+            source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-lg.jpg" type="image/jpeg")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-md.webp" type="image/webp")
+            source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-md.jpg" type="image/jpeg")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-sm.webp" type="image/webp")
+            source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-sm.jpg" type="image/jpeg")
+            img.lazy.case__background(data-src="./assets/img/projects/italo.jpg" alt="Ítalo Iung" title="Ítalo Iung")
+        .case__meta
+            .case__meta__item.case__meta__item--eye(data-target="case-modal-italo").
+                !{locals.eye}
+    .case__modal#case-modal-italo
+        .case__modal__close(data-close)
+        .case__modal__content
+            .case__modal__content__text
+                p Um site estático te basta?
+                p Utilizando a template engine Pug.js, junto com o automatizador de processos Gulp.js, crio projetos otimizados em questão de performance e SEO do zero.
+                p Sites escaláveis, devidamente modularizados, versionados vindos de projetos organizados e bem estruturados que seguem as boas práticas da programação.
+            .case__modal__content__pics
+                picture
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo-case-desktop.webp" type="image/webp")
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo-case-desktop.jpg" type="image/jpeg")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-lg.webp" type="image/webp")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-lg.jpg" type="image/jpeg")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-md.webp" type="image/webp")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-md.jpg" type="image/jpeg")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-sm.webp" type="image/webp")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-case-desktop-sm.jpg" type="image/jpeg")
+                    img.lazy(data-src="./assets/img/projects/italo-case-desktop.jpg" alt="Velocidade" title="Velocidade")
+                picture
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo-codigo.webp" type="image/webp")
+                    source(media="(min-width: 1200px)" data-srcset="./assets/img/projects/italo-codigo.jpg" type="image/jpeg")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-codigo-lg.webp" type="image/webp")
+                    source(media="(max-width: 1200px)" data-srcset="./assets/img/projects/sizes/italo-codigo-lg.jpg" type="image/jpeg")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-codigo-md.webp" type="image/webp")
+                    source(media="(max-width: 768px)" data-srcset="./assets/img/projects/sizes/italo-codigo-md.jpg" type="image/jpeg")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-codigo-sm.webp" type="image/webp")
+                    source(media="(max-width: 576px)" data-srcset="./assets/img/projects/sizes/italo-codigo-sm.jpg" type="image/jpeg")
+                    img.lazy(data-src="./assets/img/projects/italo-codigo.jpg" alt="Códigos organizados" title="Códigos organizados")

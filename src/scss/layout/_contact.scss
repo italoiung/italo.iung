@@ -91,7 +91,7 @@ main {
 
                         background-color: $highlight-pink;
 
-                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275)
+                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     }
 
                     &::after {
@@ -108,7 +108,7 @@ main {
                         margin-top: 3px;
 
                         animation: loading 1.2s linear infinite;
-                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275)
+                        transition: .7s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     }
 
                     &:hover {

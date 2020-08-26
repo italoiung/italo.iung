@@ -1,0 +1,243 @@
+main {
+    .secondary-section--cases {
+        .secondary-section__item--head {
+            right: 0;
+            background-color: $text-primary;
+            color: $bg-color;
+        }
+
+        .secondary-section__item--content {
+            margin-left: initial;
+            padding: 140px 0 0 0;
+
+            @include sm {
+                padding: 165px 0 0 0;
+            }
+
+            @include lg {
+                padding: 0;
+            }
+
+            .case {
+                position: relative;
+                padding: 1rem 1rem 2rem 2rem;
+
+                &::before {
+                    content: "";
+                    width: 90%;
+                    height: 90%;
+                    background-color: $dark-pink;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    transition: .75s cubic-bezier(.47,1.64,.41,.8);
+                }
+
+                &:nth-child(even) {
+                    padding: 1rem 2rem 2rem 1rem;
+                    &::before {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+
+                &__wrapper {
+                    position: relative;
+                    padding-bottom: 56.6%;
+                    background-color: $dark-blue;
+                    display: flex;
+                }
+
+                &__background {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    transition: .3s all;
+                }
+
+                &__meta {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+
+                    opacity: 0;
+
+                    z-index: 1;
+
+                    transform: translate(-50%, -50%);
+                    transition: 0.75s opacity cubic-bezier(0.19, 1, 0.22, 1);
+
+                    svg {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 0.5rem;
+                        cursor: pointer;
+
+                        fill: $dark-blue;
+                        background-color: rgba($color: $dark-pink, $alpha: 0.75);
+                        
+                        transition: 0.5s all;
+
+                        @include on-event {
+                            fill: $dark-pink;
+                            background-color: rgba($color: $dark-blue, $alpha: 0.75);
+                        }
+                    }
+                }
+
+                &__modal {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 20;
+                    height: 0;
+                    width: 0;
+                    overflow: hidden;
+                    transition: none;
+                    background-color: rgba($color: $dark-blue, $alpha: 0.75);
+                    backdrop-filter: blur(10px);
+                    
+                    @include lg {
+                        background-color: rgba($color: $highlight, $alpha: 0.5);
+                    }
+
+                    &.active {
+                        width: 100vw;
+                        min-height: 100vh;
+                        padding: 1.2rem;
+                        overflow: auto;
+                        transition: .75s cubic-bezier(.47,1.64,.41,.8);
+                    }
+
+                    &__close {
+                        position: sticky;
+                        top: 0;
+                        width: 40px;
+                        height: 40px;
+                        margin-left: auto;
+                        cursor: pointer;
+                        z-index: 1;
+                        
+                        @include lg {
+                            margin-bottom: -40px;
+                        }
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 5px;
+                            height: 50px;
+                            background-color: $text-primary;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            display: block;
+                            border-radius: 50%;
+                            transition: .5s ease-in-out;
+
+                            @include lg {
+                                background-color: $dark-blue;
+                            }
+                        }
+
+                        &::after {
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                        }
+                        
+                        @include on-event {
+                            &::before {
+                                transform: translate(-50%, -50%) rotate(-45deg);
+                            }
+                            &::after {
+                                transform: translate(-50%, -50%) rotate(45deg);
+                            }
+                        }
+                    }
+
+                    &__content {
+                        perspective: 1000px;
+                        width: $max-width;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        @include md {
+                            flex-direction: row;
+                            align-items: flex-start;
+                        }
+
+                        &__text {
+                            @include md {
+                                width: 40%;
+                                position: sticky;
+                                top: 0;
+                                height: calc(100vh - 2 * 1.2rem);
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            }
+
+                            &__logos {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                @include fontSize(35);
+                                margin-bottom: 1rem;
+
+                                svg {
+                                    width: 45%;
+                                    fill: $text-primary;
+
+                                    &:nth-child(2) path {
+                                        fill: $text-primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        &__pics {
+                            @include md {
+                                width: 55%;
+                            }
+                            
+                            img {
+                                transition: .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                box-shadow: 0px 9px 10px rgba($color: $dark-blue, $alpha: 0.35);
+                                margin-bottom: 1rem;
+                                
+                                @include on-event {
+                                    transform: rotateY(-15deg) rotateX(15deg);
+                                }
+                                
+                                @include md {
+                                    transform: rotateY(15deg) rotateX(15deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @include on-event {
+                    &::before {
+                        width: 80%;
+                        height: 80%;
+                    }
+
+                    .case__meta {
+                        opacity: 1;
+                    }
+
+                    .case__background {
+                        opacity: .75;
+                    }
+                }
+            }
+        }
+    }
+}
