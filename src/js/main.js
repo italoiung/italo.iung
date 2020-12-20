@@ -78,7 +78,7 @@
         const object = {}
         formData.forEach((value, key) => { object[key] = value })
 
-        fetch('https://italo.iung.me/sendmail.php', {
+        fetch('https://italo.viung.me/sendmail.php', {
             method: 'POST',
             body: JSON.stringify(object),
             headers: { "Content-Type": "application/json" },
